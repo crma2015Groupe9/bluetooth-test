@@ -8,8 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "UARTPeripheral.h"
 
+typedef enum
+{
+    IDLE = 0,
+    SCANNING,
+    CONNECTED,
+} ConnectionState;
+
+@interface ViewController : UIViewController <UITextFieldDelegate, CBCentralManagerDelegate, UARTPeripheralDelegate>
+
+@property (strong, nonatomic) IBOutlet UIButton *connectButton;
+@property (strong, nonatomic) IBOutlet UITextField *sendTextField;
+@property (strong, nonatomic) IBOutlet UIButton *sendButton;
+
+@property (strong, nonatomic) CBCentralManager      *centralManager;
+@property (strong, nonatomic) CBPeripheral          *discoveredPeripheral;
+@property (strong, nonatomic) NSMutableData         *data;
+@property (nonatomic) ConnectionState               state;
+@property (strong, nonatomic) UARTPeripheral        *currentPeripheral;
+
+- (IBAction)connectButtonPressed:(id)sender;
+- (IBAction)sendButtonPressed:(id)sender;
+- (IBAction)sendTextFieldEditingChanged:(id)sender;
 
 @end
 

@@ -14,6 +14,7 @@
 		42334AC81AB5CE6300A6BA15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42334AC71AB5CE6300A6BA15 /* Images.xcassets */; };
 		42334ACB1AB5CE6300A6BA15 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42334AC91AB5CE6300A6BA15 /* LaunchScreen.xib */; };
 		42334AD71AB5CE6300A6BA15 /* Bluetooth_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42334AD61AB5CE6300A6BA15 /* Bluetooth_testTests.m */; };
+		423BEF1B1AB8C80B005E97FF /* UARTPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 423BEF1A1AB8C80B005E97FF /* UARTPeripheral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		42334AD01AB5CE6300A6BA15 /* Bluetooth testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42334AD51AB5CE6300A6BA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42334AD61AB5CE6300A6BA15 /* Bluetooth_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bluetooth_testTests.m; sourceTree = "<group>"; };
+		423BEF191AB8C674005E97FF /* UARTPeripheral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UARTPeripheral.h; sourceTree = "<group>"; };
+		423BEF1A1AB8C80B005E97FF /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARTPeripheral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		42334AB91AB5CE6300A6BA15 /* Bluetooth test */ = {
 			isa = PBXGroup;
 			children = (
+				423BEF191AB8C674005E97FF /* UARTPeripheral.h */,
+				423BEF1A1AB8C80B005E97FF /* UARTPeripheral.m */,
 				42334ABE1AB5CE6300A6BA15 /* AppDelegate.h */,
 				42334ABF1AB5CE6300A6BA15 /* AppDelegate.m */,
 				42334AC11AB5CE6300A6BA15 /* ViewController.h */,
@@ -168,6 +173,7 @@
 				TargetAttributes = {
 					42334AB61AB5CE6300A6BA15 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3RQFQA54Q5;
 					};
 					42334ACF1AB5CE6300A6BA15 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -222,6 +228,7 @@
 				42334AC31AB5CE6300A6BA15 /* ViewController.m in Sources */,
 				42334AC01AB5CE6300A6BA15 /* AppDelegate.m in Sources */,
 				42334ABD1AB5CE6300A6BA15 /* main.m in Sources */,
+				423BEF1B1AB8C80B005E97FF /* UARTPeripheral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +350,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David TARDIVEAU (VQ6GTVFA5Q)";
 				INFOPLIST_FILE = "Bluetooth test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "392ba945-3c83-4550-81ee-a7ddff8b0713";
 			};
 			name = Debug;
 		};
@@ -353,9 +362,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David TARDIVEAU (VQ6GTVFA5Q)";
 				INFOPLIST_FILE = "Bluetooth test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "392ba945-3c83-4550-81ee-a7ddff8b0713";
 			};
 			name = Release;
 		};
@@ -412,6 +423,7 @@
 				42334ADC1AB5CE6300A6BA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42334ADD1AB5CE6300A6BA15 /* Build configuration list for PBXNativeTarget "Bluetooth testTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +432,7 @@
 				42334ADF1AB5CE6300A6BA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
